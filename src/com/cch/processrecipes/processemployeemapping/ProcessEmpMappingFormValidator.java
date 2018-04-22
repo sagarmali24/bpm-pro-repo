@@ -1,4 +1,4 @@
-package com.cch.processrecipes.process;
+package com.cch.processrecipes.processemployeemapping;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -12,19 +12,19 @@ import org.springframework.validation.Validator;
  */
 
 @Component
-public class ProcessFormValidator implements Validator
+public class ProcessEmpMappingFormValidator implements Validator
 {
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean supports(Class clazz)
 	{
-		return Process.class.isAssignableFrom(clazz);
+		return ProcessEmpMapping.class.isAssignableFrom(clazz);
 	}
 
 	@Override
 	public void validate(Object model, Errors errors)
 	{
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "process_name","required.process_name", "Process is required.");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "emp_id","required.emp_id", "Emp Id is required.");
 	}
 
 }
