@@ -40,8 +40,8 @@
 				<td><c:out value="${contact.emp_skills}"></c:out> </td>
 				<td><c:out value="${contact.emp_email}"></c:out></td>
 				<td>
-					&nbsp;<a href="updateContact.do?id=${contact.id}">Edit</a>
-					&nbsp;&nbsp;<a href="javascript:deleteContact('deleteContact.do?id=${contact.id}');">Delete</a>
+				&nbsp;<a href="updateContact.do?id=${contact.id}">Edit</a>
+					&nbsp;&nbsp;<a href="javascript:deleteContact('deleteContact.do?id=${contact.id}');">Delete</a>	
 				</td>
 			</tr>
 			</c:forEach>
